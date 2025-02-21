@@ -98,6 +98,7 @@ to decide the group keep it as relevant as possible for your project .
 now after executing the above command we will notice that it has created a lot of additional thing for you and this is where the operator will create all the required code that will interact with the client go for you 
 
 the command has created a new folder named api and it has files named groupversions_info.go, Kubesharkoperator_types.go, zz_generated.deepcopy.go
+
 Step 6:
 - Next Implement your new API and generate the manifests (e.g. CRDs,CRs) with: $ make manifests
 and write the reconciliation logic
