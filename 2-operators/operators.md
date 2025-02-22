@@ -7,7 +7,7 @@ custom kubernetes controller - nginx, istio, argocd why do you write because to 
 
 Operators
 
-- they are something that are used to bundle package and manage your kubernetes controller and most likely it deals with custom kbernetes controller
+- they are something that are used to bundle package and manage your kubernetes controller and most likely it deals with custom kubernetes controller
 
 - example- istio operator - its purpose is to bundle the istio resource and to manage the istio resources that is isitio deployment, config maps, secrets all will be bundeled into a package and managed using kubernetes operators
 
