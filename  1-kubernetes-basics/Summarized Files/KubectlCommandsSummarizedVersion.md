@@ -20,7 +20,7 @@ NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   5m    v1.23.3
 ```
 
-![Node Status](k8s-basics-images/image-31.png)
+![Node Status](/%201-kubernetes-basics/k8s-basics-images/image-31.png)
 
 ---
 
@@ -33,7 +33,7 @@ kubectl get pods
 No resources found in default namespace.
 ```
 
-![Pod Status](k8s-basics-images/image-32.png)
+![Pod Status](/%201-kubernetes-basics/k8s-basics-images/image-32.png)
 
 ---
 
@@ -47,7 +47,7 @@ NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   5m
 ```
 
-![Service Status](k8s-basics-images/image-33.png)
+![Service Status](/%201-kubernetes-basics/k8s-basics-images/image-33.png)
 
 ---
 
@@ -78,8 +78,8 @@ NAME                          READY   STATUS    RESTARTS   AGE
 nginx-depl-5c8d5f4b6c-8k9q7   1/1     Running   0          2m
 ```
 
-![Deployment Status](k8s-basics-images/image-35.png)
-![Pod Running](k8s-basics-images/image-36.png)
+![Deployment Status](/%201-kubernetes-basics/k8s-basics-images/image-35.png)
+![Pod Running](/%201-kubernetes-basics/k8s-basics-images/image-36.png)
 
 ---
 
@@ -95,7 +95,7 @@ NAME                    DESIRED   CURRENT   READY   AGE
 nginx-depl-5c8d5f4b6c   1         1         1       3m
 ```
 
-![ReplicaSet Status](k8s-basics-images/image-38.png)
+![ReplicaSet Status](/%201-kubernetes-basics/k8s-basics-images/image-38.png)
 
 ---
 
@@ -118,8 +118,8 @@ nginx-depl-5c8d5f4b6c-8k9q7   0/1     Terminating   0          5m
 nginx-depl-6c8d5f4b6c-9k9q8   1/1     Running       0          10s
 ```
 
-![Deployment Edit](k8s-basics-images/image-40.png)
-![Pod Update](k8s-basics-images/image-41.png)
+![Deployment Edit](/%201-kubernetes-basics/k8s-basics-images/image-40.png)
+![Pod Update](/%201-kubernetes-basics/k8s-basics-images/image-41.png)
 
 ---
 
@@ -134,7 +134,7 @@ kubectl logs <pod-name>
 kubectl logs mongo-depl-5c8d5f4b6c-8k9q7
 ```
 
-![Pod Logs](k8s-basics-images/image-45.png)
+![Pod Logs](/%201-kubernetes-basics/k8s-basics-images/image-45.png)
 
 ### Describe Pod
 ```bash
@@ -145,7 +145,7 @@ kubectl describe pod <pod-name>
 kubectl describe pod mongo-depl-5c8d5f4b6c-8k9q7
 ```
 
-![Pod Description](k8s-basics-images/image-43.png)
+![Pod Description](/%201-kubernetes-basics/k8s-basics-images/image-43.png)
 
 ### Access Pod Shell
 ```bash
@@ -156,7 +156,7 @@ kubectl exec -it <pod-name> -- /bin/bash
 kubectl exec -it mongo-depl-5c8d5f4b6c-8k9q7 -- /bin/bash
 ```
 
-![Pod Shell](k8s-basics-images/image-46.png)
+![Pod Shell](/%201-kubernetes-basics/k8s-basics-images/image-46.png)
 
 ---
 
@@ -177,7 +177,7 @@ kubectl get pods
 kubectl get replicasets
 ```
 
-![Deployment Deletion](k8s-basics-images/image-47.png)
+![Deployment Deletion](/%201-kubernetes-basics/k8s-basics-images/image-47.png)
 
 ---
 
@@ -211,8 +211,8 @@ spec:
         - containerPort: 80
 ```
 
-![Configuration File](k8s-basics-images/image-50.png)
-![Apply Configuration](k8s-basics-images/image-52.png)
+![Configuration File](/%201-kubernetes-basics/k8s-basics-images/image-50.png)
+![Apply Configuration](/%201-kubernetes-basics/k8s-basics-images/image-52.png)
 
 ### Update Configuration
 1. Edit the YAML file:
@@ -224,8 +224,8 @@ spec:
    kubectl apply -f nginx-deployment.yaml
    ```
 
-![Configuration Update](k8s-basics-images/image-53.png)
-![Updated Deployment](k8s-basics-images/image-54.png)
+![Configuration Update](/%201-kubernetes-basics/k8s-basics-images/image-53.png)
+![Updated Deployment](/%201-kubernetes-basics/k8s-basics-images/image-54.png)
 
 ---
 
@@ -248,8 +248,8 @@ spec:
 
 ## Workflow Diagram
 
-![kubectl Workflow](k8s-basics-images/image-55.png)
-![kubectl Commands](k8s-basics-images/image-56.png)
+![kubectl Workflow](/%201-kubernetes-basics/k8s-basics-images/image-55.png)
+![kubectl Commands](/%201-kubernetes-basics/k8s-basics-images/image-56.png)
 
 ---
 

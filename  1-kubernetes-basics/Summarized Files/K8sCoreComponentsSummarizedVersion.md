@@ -10,7 +10,7 @@
   - Pods are ephemeral (can crash/restart)
   - New IP assigned after restart → requires Service component
 
-![Pod Diagram](k8s-basics-images/image-1.png)
+![Pod Diagram](/%201-kubernetes-basics/k8s-basics-images/image-1.png)
 
 ## Service
 - **Static IP address** attached to Pod(s)
@@ -20,8 +20,8 @@
   - **Internal Service**: Private (e.g., database access)
 - Acts as load balancer for Pod replicas
 
-![Service Diagram](k8s-basics-images/image.png)
-![Service Types](k8s-basics-images/image-2.png)
+![Service Diagram](/%201-kubernetes-basics/k8s-basics-images/image.png)
+![Service Types](/%201-kubernetes-basics/k8s-basics-images/image-2.png)
 
 ## Ingress
 - **Route external requests** to internal services
@@ -30,7 +30,7 @@
   - **SSL termination**
   - **Path-based routing**
 
-![Ingress Diagram](k8s-basics-images/image-3.png)
+![Ingress Diagram](/%201-kubernetes-basics/k8s-basics-images/image-3.png)
 
 ## Configuration Management
 ### ConfigMap
@@ -38,10 +38,10 @@
 - Stores non-sensitive data:
   - Database URLs
   - Service endpoints
-- Avoids need to rebuild k8s-basics-images/images for config changes
+- Avoids need to rebuild /%201-kubernetes-basics/k8s-basics-images/images for config changes
 
-![ConfigMap Diagram](k8s-basics-images/image-4.png)
-![ConfigMap Usage](k8s-basics-images/image-5.png)
+![ConfigMap Diagram](/%201-kubernetes-basics/k8s-basics-images/image-4.png)
+![ConfigMap Usage](/%201-kubernetes-basics/k8s-basics-images/image-5.png)
 
 ### Secret
 - **Secure credential storage**
@@ -51,7 +51,7 @@
   - Certificates
 - **Base64 encoded** (not encrypted!)
 
-![Secret Diagram](k8s-basics-images/image-6.png)
+![Secret Diagram](/%201-kubernetes-basics/k8s-basics-images/image-6.png)
 
 ## Data Persistence
 ### Volumes
@@ -61,8 +61,8 @@
   - Remote storage (cloud/NAS)
 - Essential for stateful applications (e.g., databases)
 
-![Volume Problem](k8s-basics-images/image-7.png)
-![Volume Solution](k8s-basics-images/image-8.png)
+![Volume Problem](/%201-kubernetes-basics/k8s-basics-images/image-7.png)
+![Volume Solution](/%201-kubernetes-basics/k8s-basics-images/image-8.png)
 
 ## Scaling & High Availability
 ### Deployment
@@ -73,8 +73,8 @@
   - Self-healing
 - Manages Pod replicas behind Service
 
-![Deployment Diagram](k8s-basics-images/image-9.png)
-![Deployment Scaling](k8s-basics-images/image-10.png)
+![Deployment Diagram](/%201-kubernetes-basics/k8s-basics-images/image-9.png)
+![Deployment Scaling](/%201-kubernetes-basics/k8s-basics-images/image-10.png)
 
 ### StatefulSet
 - **Database-specific** management
@@ -84,8 +84,8 @@
   - Persistent storage
 - Complex to manage → often hosted externally
 
-![StatefulSet Diagram](k8s-basics-images/image-11.png)
-![High Availability](k8s-basics-images/image-12.png)
+![StatefulSet Diagram](/%201-kubernetes-basics/k8s-basics-images/image-11.png)
+![High Availability](/%201-kubernetes-basics/k8s-basics-images/image-12.png)
 
 ## Architecture Summary
 1. **Pods & Services**: Basic communication units

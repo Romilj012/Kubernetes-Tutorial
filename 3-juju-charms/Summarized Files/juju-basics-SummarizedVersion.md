@@ -37,7 +37,7 @@ juju relate app1 app2      # Connect services
   2. **Relations**: Service dependencies  
   3. **Layers**: Kubernetes manifests (`layer.yaml`)  
 
-![Charm Architecture](juju-images/image-4.png)  
+![Charm Architecture](/3-juju-charms/juju-images/image-4.png)  
 *Charm components: Metadata, relations, and Kubernetes layers.*
 
 ---
@@ -63,7 +63,7 @@ watch --color juju status --color  # Real-time status
 juju debug-log -f                  # Stream logs
 ```
 
-![Deployment Workflow](juju-images/image-2.png)  
+![Deployment Workflow](/3-juju-charms/juju-images/image-2.png)  
 *Flow: Bootstrap → Deploy → Relate → Monitor.*
 
 ---
@@ -140,7 +140,7 @@ includes: ["layer:kubernetes"]
 - [Charmhub Registry](https://charmhub.io)  
 - [Kubernetes Charm Examples](https://github.com/canonical/charm-kubernetes)  
 
-![Juju Architecture](juju-images/image-3.png)  
+![Juju Architecture](/3-juju-charms/juju-images/image-3.png)  
 *Juju components: Controller, models, and deployed applications.*
 
 ---
