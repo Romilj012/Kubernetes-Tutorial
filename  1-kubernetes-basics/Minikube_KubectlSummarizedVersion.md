@@ -9,7 +9,7 @@
   - Core Kubernetes components
   - kubectl CLI tool
 
-![Minikube Architecture](image-22.png)
+![Minikube Architecture](k8s-basics-images/image-22.png)
 
 ### Production vs Local Cluster
 | Feature          | Production Cluster       | Minikube Cluster         |
@@ -32,7 +32,7 @@
   - Service creation
   - Debugging
 
-![kubectl Workflow](image-25.png)
+![kubectl Workflow](k8s-basics-images/image-25.png)
 
 ---
 
@@ -95,7 +95,7 @@ minikube   Ready    master   5m    v1.23.3
 minikube dashboard
 ```
 
-![Cluster Dashboard](image-28.png)
+![Cluster Dashboard](k8s-basics-images/image-28.png)
 
 ---
 
@@ -129,7 +129,7 @@ minikube dashboard
 ---
 
 ## Workflow Diagram
-![Local Development Workflow](image-24.png)
+![Local Development Workflow](k8s-basics-images/image-24.png)
 
 ---
 

@@ -24,8 +24,8 @@
        - Prefers same-node pod communication
        - Load balancing between pods
 
-![Worker Node Processes](image-13.png)
-![Node Communication](image-14.png)
+![Worker Node Processes](k8s-basics-images/image-13.png)
+![Node Communication](k8s-basics-images/image-14.png)
 
 ## Master Nodes (Control Plane)
 **Core Function:** Manage cluster state and worker nodes
@@ -39,7 +39,7 @@
      - State validation
      - Client interactions (kubectl/UI/API)
 
-![API Server Flow](image-16.png)
+![API Server Flow](k8s-basics-images/image-16.png)
 
 2. **Scheduler**  
    - Resource optimization engine
@@ -49,7 +49,7 @@
      - Selects optimal worker node
    - Works with kubelet for pod execution
 
-![Scheduler Process](image-17.png)
+![Scheduler Process](k8s-basics-images/image-17.png)
 
 3. **Controller Manager**  
    - Cluster state maintenance
@@ -59,7 +59,7 @@
      - Replication management
      - Endpoint synchronization
 
-![Controller Manager](image-18.png)
+![Controller Manager](k8s-basics-images/image-18.png)
 
 4. **etcd**  
    - Distributed key-value store
@@ -70,7 +70,7 @@
    - Does NOT store application data
    - Forms cluster "brain" for state management
 
-![etcd Architecture](image-19.png)
+![etcd Architecture](k8s-basics-images/image-19.png)
 
 ## Cluster Setup & Scaling
 ### Typical Production Setup
@@ -82,7 +82,7 @@
   - 3+ worker nodes minimum
   - Auto-scaling groups common in cloud
 
-![Cluster Diagram](image-20.png)
+![Cluster Diagram](k8s-basics-images/image-20.png)
 
 ### Node Characteristics
 |                | Master Nodes               | Worker Nodes               |
@@ -101,6 +101,6 @@
    - Install node processes (CRI, kubelet, kube-proxy)
    - Join to cluster via kubeadm/kubelet
 
-![Cluster Scaling](image-21.png)
+![Cluster Scaling](k8s-basics-images/image-21.png)
 
 > **Best Practice:** Use infrastructure-as-code (IaC) tools like Terraform for node provisioning and scaling operations.

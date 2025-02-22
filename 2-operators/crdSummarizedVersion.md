@@ -54,7 +54,7 @@
     2. **Reconcile**: Compares desired state (CR) with actual state (cluster).  
     3. **Act**: Creates/updates/deletes resources (e.g., Envoy configurations).  
 
-![alt text](image-6.png)  
+![alt text](operators-images/image-6.png)  
 *Flow: User creates CR → Controller reconciles state → Desired resources are applied.*  
 
 ---
@@ -89,7 +89,7 @@
 2. **Queue**: Events are added to a worker queue.  
 3. **Reconcile**: Processes each event to align cluster state with CR spec.  
 
-![alt text](image-8.png)  
+![alt text](operators-images/image-8.png)  
 *Controller workflow: Watch → Queue → Reconcile.*  
 
 ---
@@ -136,7 +136,7 @@
 - [Istio CRDs](https://istio.io/latest/docs/reference/config/)  
 - [Operator Framework](https://operatorframework.io/)  
 
-![alt text](image-7.png)  
+![alt text](operators-images/image-7.png)  
 *Native vs. Custom Resources: Deployment (native) vs. VirtualService (custom).*  
 
 By combining CRDs, CRs, and controllers, you extend Kubernetes to manage complex, application-specific workflows (e.g., service meshes, GitOps)

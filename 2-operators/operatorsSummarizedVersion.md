@@ -98,7 +98,7 @@
 - **OperatorHub.io**: Hosts approved operators (e.g., Elasticsearch, MinIO).  
 - **OLM (Operator Lifecycle Manager)**: Manages operator installation/upgrades.  
 
-![alt text](image-2.png)  
+![alt text](operators-images/image-2.png)  
 *Flow: User submits CR → Operator reconciles state → Desired resources are created.*  
 
 By using operators, you automate complex workflows, reduce manual intervention, and ensure consistency in Kubernetes environments.

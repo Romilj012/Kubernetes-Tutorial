@@ -1,18 +1,18 @@
 Minikube
 - Setting up a production cluster would have multiple worker nodes and masternodes and the worker nodes have their own separate responsibility as seen in the diagram
 
-![alt text](image-22.png)
+![alt text](k8s-basics-images/image-22.png)
 
 - If we want to try something out very quickly for example deploying new application or new components and we want to test it on our local machine obviously setting up a cluster like this will be pretty difficult or maybe even impossible if we don't have enough resources like memory and CPU etc
 - Therefore, mini cube is is basically one node cluster where the master processes and the work processes both run on one node
 - This node will have a Docker container runtime pre-installed
 - We will be able to run the containers or the pods with containers on this node and the way it's going to run on our laptop is through a virtual box or some other hypervisor
 
-![alt text](image-23.png)
+![alt text](k8s-basics-images/image-23.png)
 
 - Basically minicube will create a virtual box on our laptop and the nodes that we see here of this node will run in that virtual box so to summarize minicube is a one node kubernetes cluster that runs in a virtualbox on our laptop which we can use for testing kubernetes on our local setup 
 
-![alt text](image-24.png)
+![alt text](k8s-basics-images/image-24.png)
 
 
 Kubectl
@@ -22,13 +22,13 @@ Kubectl
 - If we want to configure anything create any component we first had to talk to the API server
 - The way to talk to the API server is through different clientsa UI like a dashboard you can talk to it using kubernetes API or a command line tool which is kubectl and kubectl is actually the most powerful of all the three clients because with kubectl you can basically do anything in the kubernetes that we want
 
-![alt text](image-25.png)
+![alt text](k8s-basics-images/image-25.png)
 
-![alt text](image-26.png)
+![alt text](k8s-basics-images/image-26.png)
 
 - kubectl isn't just for minicube cluster if you have a cloud cluster or a hybrid cluster whatever kubectl is the tool to use to interact with any type of kubernetes cluster setup
 
-![alt text](image-27.png)
+![alt text](k8s-basics-images/image-27.png)
 
 
 Installation steps for Minikube
@@ -66,7 +66,7 @@ Step 4:
 - Clusters is also connected with that minikube cluster which means if we do kubectl get nodez which just gets us a status of the notes of the kubernetes cluster
 - command: kubectl get nodes
 
-![alt text](image-28.png)
+![alt text](k8s-basics-images/image-28.png)
 
 - we can see it's the only node and it has a must roll because it obviously has to run the master processes
 
@@ -74,9 +74,9 @@ Step 5:
 - command: minikube status
 - We see we're using 1.17 and that's the kubernetes version that is running in the minicube cluster so if we see both client version and server version in the output it means that minicube is correctly installed
 
-![alt text](image-29.png)
+![alt text](k8s-basics-images/image-29.png)
 
-![alt text](image-30.png)
+![alt text](k8s-basics-images/image-30.png)
 
 
 

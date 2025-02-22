@@ -11,7 +11,7 @@ In this guide, we will deploy two applications, MongoDB and Express, to demonstr
 2. **Express Deployment**: We will create an Express deployment that connects to MongoDB using a ConfigMap and Secret for configuration.
 3. **External Service**: We will create an external service to allow access to the Express application from a browser.
 
-![alt text](image.png)  
+![alt text](k8s-demo-project-images/image.png)  
 *Diagram of the application setup.*
 
 ---
@@ -57,7 +57,7 @@ spec:
               key: mongo-root-password
 ```
 
-![alt text](image-1.png)  
+![alt text](k8s-demo-project-images/image-1.png)  
 *MongoDB deployment configuration in Visual Studio Code.*
 
 ---
@@ -77,10 +77,10 @@ data:
   mongo-root-password: cGFzc3dvcmQ=
 ```
 
-![alt text](image-6.png)  
+![alt text](k8s-demo-project-images/image-6.png)  
 *Creating a secret in the terminal.*
 
-![alt text](image-7.png)  
+![alt text](k8s-demo-project-images/image-7.png)  
 *Secret configuration file.*
 
 ---
@@ -96,10 +96,10 @@ data:
    kubectl apply -f mongodb-deployment.yaml
    ```
 
-![alt text](image-8.png)  
+![alt text](k8s-demo-project-images/image-8.png)  
 *Applying the secret using `kubectl`.*
 
-![alt text](image-9.png)  
+![alt text](k8s-demo-project-images/image-9.png)  
 *Verifying the secret creation.*
 
 ---
@@ -111,7 +111,7 @@ Check the status of the pod:
 kubectl get pods
 ```
 
-![alt text](image-12.png)  
+![alt text](k8s-demo-project-images/image-12.png)  
 *Checking the status of the MongoDB pod.*
 
 ---
@@ -134,7 +134,7 @@ spec:
       targetPort: 27017
 ```
 
-![alt text](image-16.png)  
+![alt text](k8s-demo-project-images/image-16.png)  
 *Internal service configuration.*
 
 ---
@@ -145,7 +145,7 @@ spec:
 kubectl apply -f mongodb-service.yaml
 ```
 
-![alt text](image-17.png)  
+![alt text](k8s-demo-project-images/image-17.png)  
 *Applying the internal service.*
 
 ---
@@ -157,7 +157,7 @@ Check the service status:
 kubectl get services
 ```
 
-![alt text](image-18.png)  
+![alt text](k8s-demo-project-images/image-18.png)  
 *Verifying the internal service.*
 
 ---
@@ -177,7 +177,7 @@ data:
   database_url: mongodb-service
 ```
 
-![alt text](image-26.png)  
+![alt text](k8s-demo-project-images/image-26.png)  
 *ConfigMap configuration.*
 
 ---
@@ -226,7 +226,7 @@ spec:
               key: database_url
 ```
 
-![alt text](image-27.png)  
+![alt text](k8s-demo-project-images/image-27.png)  
 *Express deployment configuration.*
 
 ---
@@ -242,7 +242,7 @@ spec:
    kubectl apply -f mongo-express-deployment.yaml
    ```
 
-![alt text](image-28.png)  
+![alt text](k8s-demo-project-images/image-28.png)  
 *Applying the ConfigMap and deployment.*
 
 ---
@@ -254,7 +254,7 @@ Check the status of the pod:
 kubectl get pods
 ```
 
-![alt text](image-29.png)  
+![alt text](k8s-demo-project-images/image-29.png)  
 *Verifying the Express pod.*
 
 ---
@@ -279,7 +279,7 @@ spec:
       nodePort: 30000
 ```
 
-![alt text](image-30.png)  
+![alt text](k8s-demo-project-images/image-30.png)  
 *External service configuration.*
 
 ---
@@ -290,7 +290,7 @@ spec:
 kubectl apply -f mongo-express-service.yaml
 ```
 
-![alt text](image-34.png)  
+![alt text](k8s-demo-project-images/image-34.png)  
 *Applying the external service.*
 
 ---
@@ -302,7 +302,7 @@ Check the service status:
 kubectl get services
 ```
 
-![alt text](image-35.png)  
+![alt text](k8s-demo-project-images/image-35.png)  
 *Verifying the external service.*
 
 ---
@@ -314,7 +314,7 @@ To access the Express application, use the external IP and port:
 minikube service mongo-express-service
 ```
 
-![alt text](image-36.png)  
+![alt text](k8s-demo-project-images/image-36.png)  
 *Accessing the Express application in the browser.*
 
 ---
@@ -331,7 +331,7 @@ This setup demonstrates how to deploy a web application and its database in Kube
 
 ### Final Diagram
 
-![alt text](image-40.png)  
+![alt text](k8s-demo-project-images/image-40.png)  
 *Final request flow diagram.*
 
 ---

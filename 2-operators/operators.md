@@ -71,7 +71,7 @@ Steps to create an operator
 - go with develop with go and here we need to start with bootstrapping
 - next go with the prerequisites section - you need go, docker, kubectl, git
 
-![alt text](image.png)
+![alt text](operators-images/image.png)
 
 Step 1: now create a folder called 
 - command: mkdir kubershark
@@ -104,11 +104,11 @@ Step 6:
 and write the reconciliation logic
 
 
-![alt text](image-1.png)
+![alt text](operators-images/image-1.png)
 
 Flow Digram
 
-![alt text](image-2.png)
+![alt text](operators-images/image-2.png)
 
 - We are creating an operator and our end goal through operator is to create a controller and want to manage the controller
 - how will operator know that we are looking for a controller for that we need to use a trigger it can create a controller for a us.

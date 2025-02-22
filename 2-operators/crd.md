@@ -6,7 +6,7 @@ Custom Resource Defintion (CRD)
 - Deploying the CRD and the custom controller repository is the reponsibility of the devops engineer
 Deploying the custom resource can be the action of user or devops engineer
 
-![alt text](image-3.png)
+![alt text](operators-images/image-3.png)
 
 - user ->deployed application -> service -> ingress -> configmap -> secret 
 
@@ -27,15 +27,15 @@ inorder to validate if the deployment.yaml is correct or not kubernetes will hav
 2. Custom Resource
 - in kubernetes deployment.yaml is a general resource and its definition is general resource definition and whatever the user is submitting is custom resource and its definition is defined by the people of istio in this example
 
-![alt text](image-4.png)
+![alt text](operators-images/image-4.png)
 
-![alt text](image-5.png)
+![alt text](operators-images/image-5.png)
 
 3. Custom Controller
 
 - In k8s after the deployment a deployment controller is the one it is taking care of creating a replicaset and it is taking care of a pod similarly for custom resource there has to be a custom controller already deployed inour kubernetes cluster so that once we deploy our CR it will watch for the CR and 
 
-![alt text](image-6.png)
+![alt text](operators-images/image-6.png)
 
 step one okay if the organization decides to use istio for example or if the organization use any other example Step One is they will deploy the crd onto the kubernetes cluster how they will deploy this they will go to the istio documentation they'll find what is the crd and they will deploy either using the plain kubernetes manifests or they can deploy it using the helm chats or they can deploy them using the operator anything is possible okay so using the crd they go to the I mean they go to the docs and they deploy the crd who deploys the CRD so the devops engineers have deployed a new crd let's call it as a because we are talking about istio let's call it as a virtual service crd okay so virtual service crd is deployed onto our kubernetes cluster now now there is another actor here and this actor is nothing but a user so we can consider it as a developer or devops engineer or anyone okay now what this user will do again he will also go to istio docs and because he wants to use the capabilities of istio inside the cluster he will create a custom resource what is this custom resource let's say he has a namespace called John so inside this John namespace he will create a istio virtual service custom resource let's call it as vs so he has created a vs custom resource now like I told we before it getting created the API server or we know someone will intercept this request and they will try to validate it against the virtual service crd and if the request is correct then the request will pass through if not the request will fail right so this is the process that will happen let's say we have created the user has created a proper custom resource event to the documentation and he has created a proper custom resource which is validated and deployed inside our kubernetes cluster but till here we have just deployed a custom resource it will just stay there like for example if we just deploy a Ingress resource without Ingress controller what will happen nothing will happen right like we discussed in the previous class the Ingress resource will be of no use similarly we have just deployed a custom resource if we deploy a deployment there is a deployment controller which is taking or which is doing something for we but here this custom resource is being watched by no one till now right so if nobody is watching it then nothing is going to happen right so someone has to watch this custom resource so again the action tool here of the devops engineer would be to deploy a custom controller so again how this custom controller is deployed again he will go to the documentation he will either deploy them using the helm chat plane manifest or operator whatever the devops engineer wants to follow the process within the organization so now again he can create this across the cluster the custom controller or he can just create further specific namespace depending upon the feature that controller supports let's say because we are dealing with John namespace so devops engineer will deploy a custom controller here so now this custom resource is verified by the controller and controller will perform the required action in this case what is the required action the required action is istio whatever the configuration that we want to know so this istio controller which we deployed will read the custom resource and it will perform the action so whenever we are getting confused with respect to custom resources or custom resource definition
 
@@ -47,7 +47,7 @@ step one okay if the organization decides to use istio for example or if the org
 
 - Similarly if we compare with deployment so by default inside kubernetes cluster we have a resource definition for deployment as a user we are creating a deployment in kubernetes which is validated against the resource definition of our kubernetes and instead of the custom controller for deployment inside our kubernetes we have a native kubernetes controller
 
-![alt text](image-7.png)
+![alt text](operators-images/image-7.png)
 
 How to write a custom controller
 - using golang -> client-go (it will interact with kubernetes API)
@@ -55,7 +55,7 @@ How to write a custom controller
 - one of the custom controller is controller runtime package which is used to setup wathcers 
 - watchers will notify client-go as it has a package called reflector. using this reflector whenever a virtual service(of istio) is created we can put that in a worker queue and then the controller starts processing each and every object in the queue then it starts creating functionality in the k8s cluster
 
-![alt text](image-8.png)
+![alt text](operators-images/image-8.png)
 
 
 How custom controller operates
